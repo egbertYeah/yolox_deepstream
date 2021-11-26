@@ -1,0 +1,37 @@
+[property]
+gpu-id=0
+# net-scale-factor=0.0039215697906911373
+net-scale-factor=1
+# 0:RGB 1:BGR
+model-color-format=0
+
+model-engine-file=yolox_s_loulan.trt
+
+labelfile-path=labels.txt
+num-detected-classes=1
+
+batch-size=1
+interval=0
+gie-unique-id=1
+
+# primary 
+process-mode=1
+
+# Detector
+network-type=0
+
+# FP16
+network-mode=2
+
+# 0：Group Rectange 1：DBSCAN 2：NMS 3:DBSCAN+NMS 4:None
+cluster-mode=4
+
+maintain-aspect-ratio=1
+scaling-filter=1
+scaling-compute-hw=0
+
+parse-bbox-func-name=NvDsInferParseCustomYolox
+custom-lib-path=nvdsinfer_custom_impl_yolox/libnvdsinfer_custom_impl_yolox.so
+
+[class-attrs-all]
+pre-cluster-threshold=0.3
